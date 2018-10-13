@@ -1,6 +1,4 @@
 # EnergizeTerminal
 The web terminal to administrate Energize from the web!
 
-{::nomarkdown}
-<div style="width: 100%; height: 0px; position: relative; padding-bottom: 85.979%;"><iframe src="https://streamable.com/s/pvk6q/tvqxna" frameborder="0" width="100%" height="100%" allowfullscreen style="width: 100%; height: 100%; position: absolute;"></iframe></div>
-{:/}
+[![preview](https://cdn.discordapp.com/attachments/305794317543407627/500362036010549248/unknown.png)](https://streamable.com/s/pvk6q/tvqxna)
