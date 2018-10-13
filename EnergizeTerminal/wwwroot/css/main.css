@@ -4,6 +4,12 @@
     100% { opacity: 0; }
 }
 
+@-o-keyframes cursor-blink{
+    0%   { opacity: 0; }
+    50%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 @-moz-keyframes cursor-blink {
     0%   { opacity: 0; }
     50%  { opacity: 1; }
@@ -80,12 +86,14 @@ body {
 
 .terminal .new-output:after {
     display: inline-block;
-    vertical-align: -0.15em;
-    width: 0.75em;
-    margin-left: 5px;
-    background: #1ff042;
-    animation: cursor-blink 0.5s steps(1) infinite;
-    content: '';
+    width: 3px;
+    margin-left: 0px;
+    background-color: #1ff042;
+    -o-animation: cursor-blink 0.5s steps(1) 0s infinite;
+    -webkit-animation: cursor-blink 0.5s steps(1) 0s infinite;
+    -moz-animation: cursor-blink 0.5s steps(1) 0s infinite;
+    animation: cursor-blink 0.5s steps(1) 0s infinite;
+    content: ' ';
 }
 
 .terminal-form {
