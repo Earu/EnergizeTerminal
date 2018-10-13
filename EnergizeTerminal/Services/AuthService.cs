@@ -9,7 +9,7 @@ namespace EnergizeTerminal.Services
 
         public static string GenerateToken()
         {
-            string token = string.Empty;
+            string token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
             _Sessions[token] = DateTime.Now.AddHours(2);
 
             return token;
