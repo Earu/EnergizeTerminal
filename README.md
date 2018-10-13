@@ -1,4 +1,4 @@
 # EnergizeTerminal
 The web terminal to administrate Energize from the web!
 
-![vid](https://streamable.com/pvk6q)
+[![preview](https://streamable.com/pvk6q)](https://streamable.com/pvk6q)
