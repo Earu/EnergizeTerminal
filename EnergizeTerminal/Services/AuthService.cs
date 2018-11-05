@@ -10,7 +10,7 @@ namespace EnergizeTerminal.Services
         public static string GenerateToken()
         {
             string token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
-            _Sessions[token] = DateTime.Now.AddHours(2);
+            _Sessions[token] = DateTime.Now.AddMinutes(5);
 
             return token;
         }
@@ -20,6 +20,9 @@ namespace EnergizeTerminal.Services
             if (_Sessions.ContainsKey(token))
                 _Sessions.Remove(token);
         }
+
+        public static void RefreshToken(string token)
+            => _Sessions[token] = DateTime.Now.AddMinutes(5);
 
         public static bool IsAuthorized(string token)
         {

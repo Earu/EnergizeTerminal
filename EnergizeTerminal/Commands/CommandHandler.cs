@@ -57,9 +57,13 @@ namespace EnergizeTerminal.Commands
                 return new CommandResult(false, "Unknown command.");
 
             Command cmd = this.Commands[scmd.Name];
-            if (cmd.NeedsLogin && !AuthService.IsAuthorized(scmd.Token))
+            bool authorized = AuthService.IsAuthorized(scmd.Token);
+            if (cmd.NeedsLogin && !authorized)
                 return new CommandResult(false,"You are not logged in. Login using the \"login\" command.");
-            
+
+            // Refresh the token to last longer
+            if (authorized) AuthService.RefreshToken(scmd.Token);
+
             CommandContext ctx = new CommandContext(this, cmd, scmd);
             List<string> parameters = scmd.Parameters.ToList();
 
