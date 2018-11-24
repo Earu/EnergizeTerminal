@@ -71,10 +71,3 @@ $(".terminal-form").on("submit",function(e)
 
     HandleCommand(str);
 });
-
-
-
-
-
-
-
